@@ -1,0 +1,117 @@
+$(function(){
+    // #で始まるアンカーをクリックした場合に処理
+        $('a[href^="#"]').click(function() {
+            // スクロールの速度
+            var speed = 500; // ミリ秒
+            // 移動先を取得
+            var href= $(this).attr("href");
+            var target = $(href == "#" || href == "" ? 'html' : href);
+            // 移動先を数値で取得
+            var position = target.offset().top;
+            // スムーススクロール
+            $('body,html').animate({scrollTop:position}, speed, 'swing');
+            return false;
+        });
+    });
+
+$('.slider_wrap').slick({
+    autoplay:true,
+    autoplaySpeed: 90000,
+    dots:true,
+    slidesToShow:1,
+    slidesToScroll:1,
+    variableWidth:true,
+    centerMode: true,
+});
+
+$(function(){
+  function sliderSetting(){
+      var width = $(window).width();
+      if(width <= 768){
+          $('.box_flex').not('.slick-initialized').slick({
+              autoplay: true,
+              autoplaySpeed: 90000,
+              dots: true,
+              slidesToShow: 1,
+              slidesToScroll: 3,
+              variableWidth:true,
+              infinite:true,
+              centerMode: true,
+            });
+      } else {
+          $('.box_flex.slick-initialized').slick('unslick');
+      }
+  }
+  sliderSetting();
+  $(window).resize( function() {
+      sliderSetting();
+  });
+});
+
+
+function checkBreakPoint() {
+	w = $(window).width();
+	if (w <= 560) {
+		// スマホ向け（767px以下のとき）
+		$('.consulting_block_top').not('.slick-initialized').slick({
+      //スライドさせる
+      slidesToShow: 1,
+			slidesToScroll: 3,
+      autoplay:true,
+      autoplaySpeed: 90000,
+      dots:true,
+      variableWidth:true,
+      infinite:true,
+		});
+	} else {
+		// PC向け
+		$('.consulting_block_top.slick-initialized').slick('unslick');
+	}
+}
+// ウインドウがリサイズする度にチェック
+$(window).resize(function(){
+	checkBreakPoint();
+});
+// 初回チェック
+checkBreakPoint();
+
+$(function(){
+    $('.btn-gnavi').on('click',function(){
+      var rightVal = 0;
+      if($(this).hasClass('hb-open')){
+        rightVal = -300;
+        $(this).removeClass('hb-open');
+      }else{
+        $(this).addClass('hb-open');
+      }
+  
+      $('.header-nav').stop().animate({
+        right: rightVal
+      }, 200);
+    });
+  });
+  jQuery(function ($) {
+    //コンテンツを非表示に
+    $(".accordion-content").css("display", "none");
+    
+    //タイトルがクリックされたら
+    $(".js-accordion-title").click(function () {
+      //クリックしたjs-accordion-title以外の全てのopenを取る
+      $(".js-accordion-title").not(this).removeClass("open");
+      //クリックされたjs-accordion-title以外のcontentを閉じる
+      $(".js-accordion-title").not(this).next().slideUp(300);
+      //thisにopenクラスを付与
+      $(this).toggleClass("open");
+      //thisのcontentを展開、開いていれば閉じる
+      $(this).next().slideToggle(300);
+    });
+    
+    /* 下記でもOK
+     $(".accordion-content").css("display", "none");
+     $(".js-accordion-title").click(function () {
+       $(".js-accordion-title").not(this).removeClass("open").next().slideUp(300);
+       $(this).toggleClass("open").next().slideToggle(300);
+     });
+     */
+  });
+  
