@@ -804,7 +804,7 @@ html body .voice_section .voice_wrapper {
 }
 
 html body .voice_section .voice_wrapper .back_title {
-  font-size: 11.6vw;
+  font-size: 10vw;
   opacity: 0.08;
   font-family: 'Montserrat', sans-serif;
   position: absolute;
@@ -818,6 +818,7 @@ html body .voice_section .voice_wrapper .back_title {
 @media (max-width: 768px) {
   html body .voice_section .voice_wrapper .back_title {
     top: 30px;
+    font-size: 9vw;
   }
 }
 
@@ -1595,6 +1596,10 @@ html body .point_section .point_wrapper .point .point-text-block h2 .dot {
   background-position: top left 3px;
   background-repeat: repeat-x;
   background-size: 1em .3em;
+  background-image: -webkit-linear-radial-gradient(0.12em 0.12em at center center, #FFE05D, #FFE05D 100%, transparent);
+  background-image: -moz-linear-radial-gradient(0.12em 0.12em at center center, #FFE05D, #FFE05D 100%, transparent);
+  background-image: -ms-linear-radial-gradient(0.12em 0.12em at center center, #FFE05D, #FFE05D 100%, transparent);
+  background-image: -o-linear-radial-gradient(0.12em 0.12em at center center, #FFE05D, #FFE05D 100%, transparent);
   background-image: radial-gradient(0.12em 0.12em at center center, #FFE05D, #FFE05D 100%, transparent);
 }
 
