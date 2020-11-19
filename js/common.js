@@ -48,6 +48,7 @@ $('.slider_wrap').slick({
     slidesToScroll:1,
     variableWidth:true,
     centerMode: true,
+    arrows: true,   
 });
 
 $(function(){
