@@ -22,11 +22,14 @@
                 <li><a href="#brand_section">サービスの特徴　</a></li>
                 <li><a href="#info_section">相談仕方</a></li>
                 <li><a href="#recruit_section">相談事例</a></li>
-                <li><a href="#recruit_section">よくある質問</a></li>
-                <li id="contact-nav"><a href="#">LINEで相談してみる</a></li>
+                <li><a href="#question">よくある質問</a></li>
+                <li id="contact-nav"><a href="https://line.me/R/ti/p/@jcy9186e">LINEで相談してみる</a></li>
             </ul>
         </div><!--nav-->
-
+        
+        <div class="sp_btn">
+            <a href="https://line.me/R/ti/p/@jcy9186e">LINEで相談してみる</a>
+        </div>
 
         <p class="btn-gnavi">
             <span></span>
@@ -39,9 +42,14 @@
 
 <section class="mainvisual">
     <div class="mainvisual_wrapper">
-        <img src="img/fv_img.png">
+        <img class="fv_pc" src="img/fv_img.png">
+        <img class="fv_sp" src="img/fv_sp.png">
     </div>
 </section>
+
+<div class="sp_banner">
+    <a href="#"><img src="img/sp_top_banner.png" alt="スマホバナー"></a>
+</div>
 
 <section class="voice_section">
     <div class="voice_wrapper">
@@ -52,7 +60,7 @@
             <div class="item">
                 <img src="img/customer1.png" alt="お客様">
                 <div class="text-wrap">
-                    <p class="voice">高卒で働くことや、<br>18歳で社会人になることに<br>自信を持てました！</p>
+                    <p class="voice">高卒で働くことや、<br class="sp_br">18歳で社会人になることに<br class="sp_br">自信を持てました！</p>
                     <p class="job_type">マーケティング職 入社</p>
                 </div>
             </div><!--item-->
@@ -75,8 +83,11 @@
 </section>
 
 <section class="worry_section">
-    <div class="worry_wrap">
+    <div id="about_section" class="worry_wrap">
+        <div class="worry_titleblock">
         <h2>高校生の就活には<span class="blue-text">こんな悩みが尽きない・・・</span><img src="img/worry_icon.png" alt="悩みロゴ"></h2>
+        <img class="sp_worry_icon" src="img/worry_icon.png" alt="もやもやロゴ">
+    </div>
         <div class="worry_flex">
 
             <div class="worry_item">
@@ -122,7 +133,7 @@
 
 </section>
 
-<div class="yellow_section">
+<div id="brand_section" class="yellow_section">
     <img class="square" src="img/square_img.png" alt="6角形背景">
     <p class="yellow-section-text">解決に導く<span class="color-text">3つの特徴</span></p>
 </div><!--yellow-section-->
@@ -194,19 +205,17 @@
 </div><!--yellow-section-->
 
 <div class="consulting_section">
-    <div class="consulting_wrapper">
+    <div id="info_section" class="consulting_wrapper">
         <h2 class="consulting-title">相談の仕方</h2>
         
         <div class="consulting_block_top">
-
             <div class="step_box">
                 <p class="step-number">STEP1</p>
                 <div class="middle_container">
                     <img class="line-banner3" src="img/banner-line3.png" alt="LINEバナー">
                     <img class="qrcode" src="img/qr-code.png" alt="QRコード">
-                    <p class="url-line"><a href="#">https://line.me/R/ti/p/@jcy9186e</a></p>
+                    <p class="url-line"><a href="https://line.me/R/ti/p/@jcy9186e">https://line.me/R/ti/p/@jcy9186e</a></p>
                 </div>
-
                     <div class="bottom_container">
                         <p class="bottom_text">上記のいずれかで<br><span class="blue-text">LINEの友だち追加画面</span>へ!</p>
                     </div>
@@ -239,6 +248,47 @@
             </div>
 
         </div><!--consulting_block_top-->
+
+        <div class="consulting_block_top_sp">
+            <div class="step_box">
+                <p class="step-number">STEP1</p>
+                <div class="middle_container">
+                    <img class="line-banner3" src="img/banner-line3.png" alt="LINEバナー">
+                    <img class="qrcode" src="img/qr-code.png" alt="QRコード">
+                    <p class="url-line"><a href="https://line.me/R/ti/p/@jcy9186e">https://line.me/R/ti/p/@jcy9186e</a></p>
+                </div>
+                    <div class="bottom_container">
+                        <p class="bottom_text">上記のいずれかで<br><span class="blue-text">LINEの友だち追加画面</span>へ!</p>
+                    </div>
+            </div>
+
+
+            <div class="step_box">
+                <p class="step-number">STEP2</p>
+                <div class="middle_container">
+                    <img class="iphone" src="img/iphone_img1.png" alt="QRコード">
+                </div>
+
+                    <div class="bottom_container">
+                        <p class="bottom_text"><span class="blue-text">「追加」</span>を押して、<br>公式LINEを追加してください。</p>
+                    </div>
+            </div>
+
+
+            <div class="step_box">
+                <p class="step-number">STEP3</p>
+                <div class="middle_container">
+                    <img class="iphone" src="img/iphone_img2.png" alt="QRコード">
+                </div>
+
+                    <div class="bottom_container">
+                        <p class="bottom_text">友達追加後、<br><span class="blue-text">悩みや相談内容を送ってみよう</span>!</p>
+                    </div>
+            </div>
+
+        </div><!--consulting_block_top-->
+
+
         <div class="consulting_block_bottom">
             <img class="example_pc" src="img/example_img.png" alt="例">
             <img class="example_sp" src="img/example_img_sp.png" alt="例">
@@ -286,7 +336,7 @@
 
 <div class="sodan_section">
     <div class="sodan_wrap">
-        <h2 class="sodan_title">相談事例</h2>
+        <h2 id="recruit_section" class="sodan_title">相談事例</h2>
         <div class="slider">
             <div class="slider_wrap">
 
@@ -329,6 +379,7 @@
 
             </div><!--slidewrap-->
         </div><!--slider-->
+
         <img class="line-banner" src="img/banner-line2.png" alt="LINEバナー">
         <img class="point_banner_sp" src="img/line_banner_sp.png" alt="LINEバナー">
     </div>
@@ -346,40 +397,51 @@
 </section>
 
 <section class="question">
-    <div class="question_wrapper">
+    <div id="question" class="question_wrapper">
         <div class="question_box">
             <h2 class="question_title">よくある質問</h2>
 
             <div id="accordion" class="accordion-container">
                 <h4 class="accordion-title js-accordion-title">Q 就職か進学かも決まっていないですが、相談しても大丈夫ですか？</h4>
                 <div class="accordion-content">
-                  <p><span class="answer">A</span>.もちろん大丈夫です。高校生一人ひとりの状況に<br>合わせて専門のスタッフが相談にのっています。あなたにとって就職か進学どちらが良いのか、一緒に考えていきましょう。</p>
-                </div>
+                    <div class="answer_div">
+                        <p class="answer">A</p>
+                        <p>もちろん大丈夫です。高校生一人ひとりの状況に<br>合わせて専門のスタッフが相談にのっています。あなたにとって就職か進学どちらが良いのか、一緒に考えていきましょう</p>
+                    </div>                </div>
             </div>
             <div id="accordion" class="accordion-container">
                 <h4 class="accordion-title js-accordion-title">Q どんな人が相談にのってくれますか？</h4>
                 <div class="accordion-content">
-                  <p><span class="answer">A</span>.もちろん大丈夫です。高校生一人ひとりの状況に<br>合わせて専門のスタッフが相談にのっています。あなたにとって就職か進学どちらが良いのか、一緒に考えていきましょう。</p>
-                </div>
+                    <div class="answer_div">
+                        <p class="answer">A</p>
+                        <p class="answer-text">もちろん大丈夫です。高校生一人ひとりの状況に<br>合わせて専門のスタッフが相談にのっています。あなたにとって就職か進学どちらが良いのか、一緒に考えていきましょう</p>
+                    </div>                </div>
             </div>
 
             <div id="accordion" class="accordion-container">
                 <h4 class="accordion-title js-accordion-title">Q 就活のサポートを受けるのにお金はかかりますか？</h4>
                 <div class="accordion-content">
-                  <p><span class="answer">A</span>.もちろん大丈夫です。高校生一人ひとりの状況に<br>合わせて専門のスタッフが相談にのっています。あなたにとって就職か進学どちらが良いのか、一緒に考えていきましょう。</p>
-                </div>
+                    <div class="answer_div">
+                        <p class="answer">A</p>
+                        <p class="answer-text">もちろん大丈夫です。高校生一人ひとりの状況に<br>合わせて専門のスタッフが相談にのっています。あなたにとって就職か進学どちらが良いのか、一緒に考えていきましょう</p>
+                    </div>                </div>
             </div>
             <div id="accordion" class="accordion-container">
                 <h4 class="accordion-title js-accordion-title">Q 自分に向いている仕事、あっている仕事を知りたいです。</h4>
                 <div class="accordion-content">
-                  <p><span class="answer">A</span>.もちろん大丈夫です。高校生一人ひとりの状況に<br>合わせて専門のスタッフが相談にのっています。あなたにとって就職か進学どちらが良いのか、一緒に考えていきましょう。</p>
+                    <div class="answer_div">
+                        <p class="answer">A</p>
+                        <p class="answer-text">もちろん大丈夫です。高校生一人ひとりの状況に<br>合わせて専門のスタッフが相談にのっています。あなたにとって就職か進学どちらが良いのか、一緒に考えていきましょう</p>
+                    </div>
                 </div>
             </div>
             <div id="accordion" class="accordion-container">
                 <h4 class="accordion-title js-accordion-title">Q 高校1年生でも使えるサービスですか？</h4>
                 <div class="accordion-content">
-                  <p><span class="answer">A</span>.もちろん大丈夫です。高校生一人ひとりの状況に<br>合わせて専門のスタッフが相談にのっています。あなたにとって就職か進学どちらが良いのか、一緒に考えていきましょう。</p>
-                </div>
+                    <div class="answer_div">
+                        <p class="answer">A</p>
+                        <p class="answer-text">もちろん大丈夫です。高校生一人ひとりの状況に<br>合わせて専門のスタッフが相談にのっています。あなたにとって就職か進学どちらが良いのか、一緒に考えていきましょう</p>
+                    </div>                </div>
             </div>
 
         </div>
