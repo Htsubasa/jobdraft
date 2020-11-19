@@ -518,6 +518,7 @@ html body header .header-inner .header-nav ul #contact-nav {
   background: linear-gradient(to right, #3BC325, #A0DC1F);
   border-radius: 40px;
   margin-left: 35px;
+  margin-top: 15px;
   /*a*/
 }
 
@@ -845,7 +846,6 @@ html body .voice_section .voice_wrapper .voice_title {
 
 @media (max-width: 560px) {
   html body .voice_section .voice_wrapper .voice_title {
-    background-image: url(../img/title_back_sp.png);
     font-size: 20px;
     background-size: 270px;
     padding-bottom: 35px;
@@ -947,7 +947,6 @@ html body .voice_section .voice_wrapper .box_flex .item {
 
 @media (max-width: 768px) {
   html body .voice_section .voice_wrapper .box_flex .item {
-    width: 300px;
     margin-right: 30px;
     margin-left: 30px;
   }
@@ -956,7 +955,7 @@ html body .voice_section .voice_wrapper .box_flex .item {
 @media (max-width: 768px) {
   html body .voice_section .voice_wrapper .box_flex .item {
     height: 107px;
-    padding: 13px 17px 18px 13px;
+    padding: 13px 14px 18px 13px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -985,6 +984,13 @@ html body .voice_section .voice_wrapper .box_flex .item img {
   }
 }
 
+@media (max-width: 560px) {
+  html body .voice_section .voice_wrapper .box_flex .item img {
+    width: 82px;
+    height: 81px;
+  }
+}
+
 html body .voice_section .voice_wrapper .box_flex .item .text-wrap {
   /*job_type*/
 }
@@ -1010,12 +1016,8 @@ html body .voice_section .voice_wrapper .box_flex .item .text-wrap .voice {
 
 @media (max-width: 560px) {
   html body .voice_section .voice_wrapper .box_flex .item .text-wrap .voice {
-    font-size: 13px;
+    font-size: 12px;
   }
-}
-
-html body .voice_section .voice_wrapper .box_flex .item .text-wrap .voice .sp_br {
-  display: none;
 }
 
 @media (max-width: 560px) {
@@ -1046,7 +1048,7 @@ html body .worry_section {
 
 @media (max-width: 560px) {
   html body .worry_section {
-    padding-bottom: 67px;
+    padding-bottom: 47px;
     padding-top: 40px;
   }
 }
@@ -1306,7 +1308,7 @@ html body .worry_section .worry_wrap .line_container h2 {
 @media (max-width: 560px) {
   html body .worry_section .worry_wrap .line_container h2 {
     font-size: 33px;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
     line-height: 1.2;
   }
 }
@@ -1365,6 +1367,10 @@ html body .worry_section .worry_wrap .line_container .banner-line2_sp {
     width: 100%;
     padding-top: 0px;
   }
+}
+
+html body #brand_section {
+  width: 100%;
 }
 
 html body .yellow_section {
@@ -1442,7 +1448,7 @@ html body .point_section .point_wrapper {
 @media (max-width: 560px) {
   html body .point_section .point_wrapper {
     padding-top: 57px;
-    padding-bottom: 69px;
+    padding-bottom: 39px;
   }
 }
 
@@ -1600,11 +1606,11 @@ html body .point_section .point_wrapper .point .point-text-block h2 .dot {
   -webkit-background-size: 1em .3em;
   -o-background-size: 1em .3em;
   -ms-background-size: 1em .3em;
-  background-image: -webkit-linear-radial-gradient(0.12em 0.12em at center center, #FFE05D, #FFE05D 100%, transparent);
-  background-image: -moz-linear-radial-gradient(0.12em 0.12em at center center, #FFE05D, #FFE05D 100%, transparent);
-  background-image: -ms-linear-radial-gradient(0.12em 0.12em at center center, #FFE05D, #FFE05D 100%, transparent);
-  background-image: -o-linear-radial-gradient(0.12em 0.12em at center center, #FFE05D, #FFE05D 100%, transparent);
-  background-image: radial-gradient(0.12em 0.12em at center center, #FFE05D, #FFE05D 100%, transparent);
+  background-image: -webkit-linear-radial-gradient(0.12em 0.12em at center center, #FFE05D, #FFE05D 100%, rgba(255, 255, 255, 0));
+  background-image: -moz-linear-radial-gradient(0.12em 0.12em at center center, #FFE05D, #FFE05D 100%, rgba(255, 255, 255, 0));
+  background-image: -ms-linear-radial-gradient(0.12em 0.12em at center center, #FFE05D, #FFE05D 100%, rgba(255, 255, 255, 0));
+  background-image: -o-linear-radial-gradient(0.12em 0.12em at center center, #FFE05D, #FFE05D 100%, rgba(255, 255, 255, 0));
+  background-image: radial-gradient(0.12em 0.12em at center center, #FFE05D, #FFE05D 100%, rgba(0, 0, 0, 0));
 }
 
 html body .point_section .point_wrapper .point .point-text-block .point-text-area {
@@ -1709,7 +1715,7 @@ html body .consulting_section .consulting_wrapper {
 }
 
 html body .consulting_section .consulting_wrapper .consulting-title {
-  font-size: 40px;
+  font-size: 35px;
   font-weight: bold;
   letter-spacing: 1.6px;
   margin-bottom: 67px;
@@ -1783,6 +1789,7 @@ html body .consulting_section .consulting_wrapper .consulting-title:after {
 
 html body .consulting_section .consulting_wrapper .slick-prev::before {
   content: url(../img/prev.png);
+  display: none;
 }
 
 html body .consulting_section .consulting_wrapper .slick-next::before {
@@ -2344,7 +2351,7 @@ html body .logo_section .logo_wrapper {
 }
 
 html body .logo_section .logo_wrapper .logo_section_title {
-  font-size: 40px;
+  font-size: 35px;
   color: #0564A8;
   letter-spacing: 0.2px;
   -webkit-box-pack: center;
@@ -2562,7 +2569,7 @@ html body .question_wrapper .question_box {
 html body .question_wrapper .question_box .question_title {
   padding-top: 99px;
   padding-bottom: 83px;
-  font-size: 45px;
+  font-size: 35px;
   font-weight: bold;
   text-align: center;
 }
@@ -2751,7 +2758,7 @@ html body .sodan_section .sodan_wrap .sodan_title {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 45px;
+  font-size: 35px;
   padding-bottom: 71px;
   font-weight: bold;
   letter-spacing: 2.25px;
@@ -2864,6 +2871,8 @@ html body .sodan_section .sodan_wrap .slider .slider_wrap .item .item_top .text-
   font-size: 24px;
   color: #0564A8;
   font-weight: 900;
+  line-height: 1.3;
+  margin-bottom: 8px;
 }
 
 @media (max-width: 768px) {
@@ -2876,6 +2885,13 @@ html body .sodan_section .sodan_wrap .slider .slider_wrap .item .item_top .text-
   html body .sodan_section .sodan_wrap .slider .slider_wrap .item .item_top .text-wrap .voice {
     margin-top: 11px;
     margin-bottom: 12px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 560px) {
+  html body .sodan_section .sodan_wrap .slider .slider_wrap .item .item_top .text-wrap .voice .sp_br {
+    display: none;
   }
 }
 
