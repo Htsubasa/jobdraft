@@ -76,15 +76,22 @@ body{
         @include tab{
           padding-left: 10px;
         }
+        @include sp{
+          padding-left: 0px;
+        }
         .header-logo-title{
           color: $blue;
           font-size: 29px;
           text-align: center;
+          font-weight: 900;
           @include pc-head(){
             font-size: 25px;
           }
           @include sp{
             font-size: 15px;
+          }
+          @include sp-second(){
+            font-size: 3.9vw;
           }
           .header-span{
             display: block;
@@ -107,7 +114,7 @@ body{
         width: 300px;
         top: 0;
         right: -300px;
-        background-color: #0C2B4A;
+        background-color: $blue;
         height: 100%;
         padding-top: 0px;
         z-index: 3;
@@ -116,13 +123,9 @@ body{
 
       @include sp-second(){
       }
-
-
             ul{
                 display: flex;
                 align-items: center;
-
-
                 @include pc{
                     display: inline-block;
                     padding-top: 80px;
@@ -171,6 +174,10 @@ body{
                   background: $linear-green;
                   border-radius: 40px;
                   margin-left: 35px;
+                  @include pc{
+                    width:100%;
+                    padding-left: 0px;
+                  }
 
                     a{
                       display: block;
@@ -182,6 +189,9 @@ body{
 
                 
                         @include pc{
+                          line-height: 10px;
+                          text-align: center;
+                          padding-left: 0px;
                         }
 
                         @include tab{
@@ -191,6 +201,49 @@ body{
 
             }/*ul*/
         }
+
+        .sp_btn{
+          display: none;
+
+          background: $linear-green;
+          border-radius: 40px;
+          margin-left: 35px;
+
+          @include pc{
+            display:initial;
+            width:100%;
+            padding-left: 0px;
+            width: 161px;
+            height: 33px;
+            text-align: center;
+            margin-right: 84px;
+          }
+          @include sp(){
+            margin-right: 50px;
+          }
+
+            a{
+              display: block;
+              line-height: 33px;
+              font-size: 12px;
+              font-weight: bold;
+              letter-spacing: 0.375px;
+              color: #ffffff;
+
+        
+                @include pc{
+                  display: block;
+                  line-height: 33px;
+                  font-size: 12px;
+                  font-weight: bold;
+                  letter-spacing: 0.375px;
+                  color: #ffffff;    
+                }
+
+                @include tab{
+                }
+            }/*a*/
+        }/*contact-nav*/
 
 
 
@@ -211,7 +264,7 @@ body{
           
             @include sp{
               top: 25px;
-              right: 7%;
+              right: 4%;
             }
         
           }
@@ -248,11 +301,11 @@ body{
                     top: 0;
                     z-index: 1000;
                     width: 40px;
-                    background-color: #0C2B4A;
+                    background-color: #80C340;
                 }
           
                 @include sp{
-                    width: 28px;
+                    width: 25px;
                     top: 0;
               }
           
@@ -264,11 +317,11 @@ body{
                     top: 10px;
                     z-index: 1000;
                     width: 40px;
-                    background-color: #0C2B4A;
+                    background-color: #80C340;
                 }
           
                 @include sp{
-                  width: 28px;
+                  width: 25px;
                   top: 7px;
               }
           
@@ -279,11 +332,11 @@ body{
                     top: 20px;
                     z-index: 1000;
                     width: 40px;
-                    background-color: #0C2B4A;
+                    background-color: #80C340;
                 }
           
                 @include sp{
-                    width: 28px;
+                    width: 25px;
                     top: 14px;
               }
           
@@ -327,16 +380,44 @@ body{
 .mainvisual{
   &_wrapper{
     
-    img{
+    .fv_pc{
       width: 100%;
       height: 100%;
       vertical-align: top;
+      @include sp{
+        display: none;
+      }
+    }
+    .fv_sp{
+      display: none;
+      @include sp{
+        width: 100%;
+        height: 100%;  
+        display: initial;
+      }
     }
 
 
   }
 }
 
+.sp_banner{
+  display: none;
+  @include sp{
+    display: initial;
+    text-align: center;
+  }
+  a{
+    display: block;
+    width: 100%;
+    padding: 24px 0 20px;
+
+    img{
+      max-width: 500px;
+      width: 88%;
+    }
+  }
+}
 
 
 .voice_section{
@@ -361,16 +442,19 @@ body{
     }
 
     .back_title{
-      font-size: 11.7vw;
+      font-size: 11.6vw;
       opacity: 0.08;
       font-family: 'Montserrat', sans-serif;
       position: absolute;
       z-index: 1;
       color: white;
       font-weight: bold;
+      width: 100%;
+      text-align: center;
       @include tab{
-        display: none;
+        top: 30px;
       }
+
     }
   
     .voice_title{
@@ -506,11 +590,24 @@ body{
             @include pc(){
               font-size: 1.4vw;
             }
+            @include sp{
+              font-size: 13px;
+            }
+            .sp_br{
+              display: none;
+              @include sp{
+                display: none;
+              }
+            }
+            
 
           }
           .job_type{
             font-size: 13px;
             color: #5C5C5C;
+            @include sp{
+              font-size: 10px;
+            }
         }/*job_type*/
         }
       }
@@ -531,6 +628,9 @@ body{
   }
 
   .worry_wrap{
+    .worry_titleblock{
+      position: relative;
+    
     h2{
       font-size: 40px;
       color: $black;
@@ -562,6 +662,18 @@ body{
       }
 
     }
+
+    .sp_worry_icon{
+      display:none;
+      @include tab{
+        width: 31px;
+        height: 29px;
+        position: absolute;
+        top: 10px;
+        right: 200px;
+      }
+    }
+  }
 
     .worry_flex{
       display: flex;
@@ -783,7 +895,7 @@ body{
     background-size: cover;
     background-repeat: repeat;
     @include sp{
-      padding-top: 37.5px;
+      padding-top: 57px;
       padding-bottom: 69px;
     }
 
@@ -876,6 +988,7 @@ body{
           font-size: 35px;
           margin: 20px 0px 12px;
           line-height: 1.6;
+          padding-top: 20px;
           @include pc{
             font-size: 32px;
           }
@@ -884,7 +997,7 @@ body{
           }
           @include sp{
             text-align: center;
-            margin: 16px 0px 18px;
+            margin: 0px 0px 18px;
             font-size: 26px;
           }
   
@@ -1008,6 +1121,13 @@ margin-left: 2rem;
 }
 }
 
+.slick-prev::before {
+  content: url(../img/prev.png);
+}
+.slick-next::before {
+   content: url(../img/next.png);
+}
+
     .consulting_block_top{
       display: flex;
       justify-content: space-between;
@@ -1015,8 +1135,8 @@ margin-left: 2rem;
       -ms-flex-pack: justify;
       justify-content: space-between;
       -webkit-box-align: center;
--ms-flex-align: center;
-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
       max-width: 1200px;
       width: 100%;
       margin: 0 auto;
@@ -1028,6 +1148,8 @@ align-items: center;
       }
       @include sp{
         padding: 0;
+        margin: 0;
+        display: none;
       }
 
       .slick-list{
@@ -1185,6 +1307,191 @@ align-items: center;
         }
       }
     }/*consulting_block_top*/
+
+
+
+    .consulting_block_top_sp{
+      display: none;
+
+      margin: 0 auto;
+      padding-left: 15px;
+      padding-right: 15px;
+      @include tab{
+        padding-left: 10px;
+        padding-right: 10px;  
+      }
+      @include sp{
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        max-width: 1200px;
+        width: 100%;
+      }
+
+      .slick-list{
+        margin-bottom: 30px;
+      }
+
+      .slick-dots li.slick-active button:before{
+        color: black;
+      }
+
+      .slick-dots li button:before{
+        color: black;
+      }
+      
+  
+      .step_box{
+        width: 348px;
+        text-align: center;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.08);
+        @include pc{
+          width: 40vw;
+        }
+        @include tab{
+          width: 35vw;
+        }
+        @include sp{
+          width: 262px;
+          margin-right: 10px;
+          margin-left: 10px;
+        }
+
+        .step-number{
+          font-size: 25px;
+          color: white;
+          font-weight: 600;
+          font-family: 'Montserrat', sans-serif;
+          padding: 24px 0 23px;
+          background-color: #2F3046;
+          border-top-left-radius: 8px;
+          border-top-right-radius: 8px;
+          @include tab{
+            font-size: 20px;
+            padding: 16px 0 16px;
+          }
+        }
+        .middle_container{
+          background-color: #E4EDF4;
+          height: 321px;
+          @include pc{
+            height: 27vw;
+          }
+          @include sp{
+            height: 242px;
+          }
+
+          .line-banner3{
+            width: 291px;
+            padding-top: 17px;
+            @include pc{
+              width: 24vw;
+            }
+            @include tab{
+              width: 22vw;
+              padding-top: 13px;
+            }
+            @include sp{
+              width: 214px;
+              height: auto;
+              margin: 0 auto;
+            }
+          }
+          .qrcode{
+            width: 136px;
+            padding: 0px 0px 16px;
+            @include pc{
+              width: 10vw;
+              padding: 0px 0px 5px;
+            }
+            @include tab{
+              width: 8vw;
+              display: block;
+              margin: 0 auto;
+            }
+            @include sp{
+              width: 100px;
+              height: 100px;
+            }
+          }
+
+          .iphone{
+            width: 100%;
+            vertical-align:top;
+            height: 100%;
+          }
+
+          .url-line{
+            padding-bottom: 30px;
+          a{
+            color: $blue;
+            font-weight: bold;
+            font-size: 14px;
+            @include pc{
+              font-size: 12px;
+            }
+            @include tab{
+              font-size: 10px;
+            }
+          }
+        }
+
+        }
+
+        .bottom_container{
+          background-color: white;
+          border-bottom-left-radius: 8px;
+          border-bottom-right-radius: 8px;
+
+          .bottom_text{
+            padding: 34px 0 30px;
+            color: $black;
+            font-size: 19px;
+            font-weight: bold;
+            @include pc{
+              font-size: 1.8vw;
+            }
+            @include tab{
+              padding: 28px 0 27px;
+            }
+            @include sp{
+              font-size: 16px;
+            }
+
+            .blue-text{
+              color: $blue;
+            }
+          }
+
+        }
+
+      }/*step_box*/
+
+      .arrow{
+        width: 50px;
+        height: 40px;
+        @include pc{
+          width: 40px;
+          height: 30px;
+        }
+        @include tab{
+          width: 30px;
+          height: 20px;
+        }
+        @include sp{
+          display: none;
+        }
+      }
+    }/*consulting_block_top*/
+
+
   }
 
   .consulting_block_bottom{
@@ -1463,6 +1770,22 @@ margin-left: 2rem;
         .answer{
           font-size: 24px;
           color: $blue;
+          font-family: 'Montserrat', sans-serif;
+          margin-right: 13px;
+          font-weight: 700;
+          @include sp{
+            font-size: 16px;
+          }
+        }
+        .answer_div{
+          display: flex;
+          .answer-text{
+            font-size: 15px;
+            color: #1C1C1C;
+            @include sp{
+              font-size: 13px;
+            }
+          }
         }
       }
       
@@ -1584,6 +1907,8 @@ margin-left: 2rem;
                   margin-top: 11px;
                   margin-bottom: 12px;  
                 }
+
+             
               }/*voice*/
               .job{
                 width: 170px;
@@ -1611,6 +1936,13 @@ margin-left: 2rem;
             }
           }
         }/*item*/
+
+        .slick-prev::before {
+          content: url(../img/prev.png);
+        }
+       .slick-next::before {
+           content: url(../img/next.png);
+       }
 
 
       }
@@ -1847,9 +2179,10 @@ footer{
       height: 287px;
     }
     .footer-banner{
+      position: fixed;
       width: 700px;
       height: auto;
-      position: absolute;
+      position: fixed;
       bottom: 0;
       left: 50%;
       transform: translate(-50%, 0%);
