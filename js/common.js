@@ -1,3 +1,29 @@
+
+$(function(){
+  function sliderSetting(){
+      var width = $(window).width();
+      if(width <= 560){
+          $('.consulting_block_top_sp').not('.slick-initialized').slick({
+            autoplay:true,
+            autoplaySpeed: 3000,
+            dots:true,
+            slidesToShow:1,
+            slidesToScroll:1,
+            variableWidth:true,
+            arrows: true,   
+            centerMode: true,
+                
+            });
+      } else {
+          $('.consulting_block_top.slick-initialized').slick('unslick');
+      }
+  }
+  sliderSetting();
+  $(window).resize( function() {
+      sliderSetting();
+  });
+});
+
 $(function(){
     // #で始まるアンカーをクリックした場合に処理
         $('a[href^="#"]').click(function() {
@@ -16,7 +42,7 @@ $(function(){
 
 $('.slider_wrap').slick({
     autoplay:true,
-    autoplaySpeed: 90000,
+    autoplaySpeed: 3000,
     dots:true,
     slidesToShow:1,
     slidesToScroll:1,
@@ -30,7 +56,7 @@ $(function(){
       if(width <= 768){
           $('.box_flex').not('.slick-initialized').slick({
               autoplay: true,
-              autoplaySpeed: 90000,
+              autoplaySpeed: 3000,
               dots: true,
               slidesToShow: 1,
               slidesToScroll: 3,
@@ -47,33 +73,6 @@ $(function(){
       sliderSetting();
   });
 });
-
-
-function checkBreakPoint() {
-	w = $(window).width();
-	if (w <= 560) {
-		// スマホ向け（767px以下のとき）
-		$('.consulting_block_top').not('.slick-initialized').slick({
-      //スライドさせる
-      slidesToShow: 1,
-			slidesToScroll: 3,
-      autoplay:true,
-      autoplaySpeed: 90000,
-      dots:true,
-      variableWidth:true,
-      infinite:true,
-		});
-	} else {
-		// PC向け
-		$('.consulting_block_top.slick-initialized').slick('unslick');
-	}
-}
-// ウインドウがリサイズする度にチェック
-$(window).resize(function(){
-	checkBreakPoint();
-});
-// 初回チェック
-checkBreakPoint();
 
 $(function(){
     $('.btn-gnavi').on('click',function(){
