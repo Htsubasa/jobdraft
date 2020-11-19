@@ -1596,6 +1596,10 @@ html body .point_section .point_wrapper .point .point-text-block h2 .dot {
   background-position: top left 3px;
   background-repeat: repeat-x;
   background-size: 1em .3em;
+  -moz-background-size: 1em .3em;
+  -webkit-background-size: 1em .3em;
+  -o-background-size: 1em .3em;
+  -ms-background-size: 1em .3em;
   background-image: -webkit-linear-radial-gradient(0.12em 0.12em at center center, #FFE05D, #FFE05D 100%, transparent);
   background-image: -moz-linear-radial-gradient(0.12em 0.12em at center center, #FFE05D, #FFE05D 100%, transparent);
   background-image: -ms-linear-radial-gradient(0.12em 0.12em at center center, #FFE05D, #FFE05D 100%, transparent);
