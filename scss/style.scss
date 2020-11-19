@@ -219,6 +219,7 @@ body{
             margin-right: 84px;
           }
           @include sp(){
+            width: 140px;
             margin-right: 50px;
           }
 
@@ -643,10 +644,19 @@ body{
       @include tab(){
         font-size: 30px;
         padding-bottom: 40px;
-      }
+        background-image: url(../img/worry_icon.png);
+        background-size: 30px;
+        background-size: 40px;
+        background-position: 74% 3px;
+          }
       @include sp(){
         font-size: 23px;
         padding-bottom: 0px;
+        background-position: 78% 0px;
+        background-size: 35px;
+      }
+      @include sp-second(){
+        background-position: 90% 0px;
       }
       .blue-text{
         color: #3077B7;
@@ -1766,6 +1776,8 @@ margin-left: 2rem;
         font-size: 15px;
         @include sp{
           font-size: 14px;
+          width: 95%;
+          margin: 0 auto;
         }
         .answer{
           font-size: 24px;

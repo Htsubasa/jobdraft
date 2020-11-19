@@ -568,6 +568,7 @@ html body header .header-inner .sp_btn {
 
 @media (max-width: 560px) {
   html body header .header-inner .sp_btn {
+    width: 140px;
     margin-right: 50px;
   }
 }
@@ -1072,6 +1073,10 @@ html body .worry_section .worry_wrap .worry_titleblock h2 {
   html body .worry_section .worry_wrap .worry_titleblock h2 {
     font-size: 30px;
     padding-bottom: 40px;
+    background-image: url(../img/worry_icon.png);
+    background-size: 30px;
+    background-size: 40px;
+    background-position: 74% 3px;
   }
 }
 
@@ -1079,6 +1084,14 @@ html body .worry_section .worry_wrap .worry_titleblock h2 {
   html body .worry_section .worry_wrap .worry_titleblock h2 {
     font-size: 23px;
     padding-bottom: 0px;
+    background-position: 78% 0px;
+    background-size: 35px;
+  }
+}
+
+@media (max-width: 425px) {
+  html body .worry_section .worry_wrap .worry_titleblock h2 {
+    background-position: 90% 0px;
   }
 }
 
@@ -2649,6 +2662,8 @@ html body .question_wrapper .question_box .accordion-content {
 @media (max-width: 560px) {
   html body .question_wrapper .question_box .accordion-content {
     font-size: 14px;
+    width: 95%;
+    margin: 0 auto;
   }
 }
 
