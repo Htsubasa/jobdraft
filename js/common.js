@@ -4,7 +4,6 @@ $(function(){
       var width = $(window).width();
       if(width <= 560){
           $('.consulting_block_top_sp').not('.slick-initialized').slick({
-            autoplay:true,
             autoplaySpeed: 3000,
             dots:true,
             slidesToShow:1,
@@ -12,7 +11,7 @@ $(function(){
             variableWidth:true,
             arrows: true,   
             centerMode: true,
-                
+            infinite: false,
             });
       } else {
           $('.consulting_block_top.slick-initialized').slick('unslick');
@@ -41,7 +40,6 @@ $(function(){
     });
 
 $('.slider_wrap').slick({
-    autoplay:true,
     autoplaySpeed: 3000,
     dots:true,
     slidesToShow:1,
@@ -105,13 +103,34 @@ $(function(){
       //thisのcontentを展開、開いていれば閉じる
       $(this).next().slideToggle(300);
     });
-    
-    /* 下記でもOK
-     $(".accordion-content").css("display", "none");
-     $(".js-accordion-title").click(function () {
-       $(".js-accordion-title").not(this).removeClass("open").next().slideUp(300);
-       $(this).toggleClass("open").next().slideToggle(300);
-     });
-     */
+
   });
   
+  $(function() {
+    var topBtn = $('.footer_banner_img');
+    //ボタンを非表示にする
+    topBtn.hide();
+    //スクロールしてページトップから100に達したらボタンを表示
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 700) {
+　　　　　　　//フェードインで表示
+            topBtn.fadeIn();
+        } else {
+　　　　　　　//フェードアウトで非表示
+            topBtn.fadeOut();
+        }
+    });
+    //スクロールしてトップへ戻る
+    topBtn.click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 500);
+        return false;
+    });
+});
+
+(function($){
+  $('.header-nav ul li a[href]').on('click', function(event) {
+    $('.btn-gnavi span').trigger('click');
+  });
+})(jQuery)

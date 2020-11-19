@@ -728,6 +728,10 @@ html body header .header-inner .btn-gnavi.hb-open span:nth-of-type(3) {
   }
 }
 
+html body .mainvisual_wrapper {
+  position: relative;
+}
+
 html body .mainvisual_wrapper .fv_pc {
   width: 100%;
   height: 100%;
@@ -736,6 +740,20 @@ html body .mainvisual_wrapper .fv_pc {
 
 @media (max-width: 560px) {
   html body .mainvisual_wrapper .fv_pc {
+    display: none;
+  }
+}
+
+html body .mainvisual_wrapper .mv_line {
+  position: absolute;
+  width: 38%;
+  bottom: 10%;
+  z-index: 10;
+  left: 13%;
+}
+
+@media (max-width: 560px) {
+  html body .mainvisual_wrapper .mv_line {
     display: none;
   }
 }
@@ -805,7 +823,7 @@ html body .voice_section .voice_wrapper {
 }
 
 html body .voice_section .voice_wrapper .back_title {
-  font-size: 10vw;
+  font-size: 11vw;
   opacity: 0.08;
   font-family: 'Montserrat', sans-serif;
   position: absolute;
@@ -813,13 +831,14 @@ html body .voice_section .voice_wrapper .back_title {
   color: white;
   font-weight: bold;
   width: 100%;
+  top: 25px;
   text-align: center;
 }
 
 @media (max-width: 768px) {
   html body .voice_section .voice_wrapper .back_title {
-    top: 30px;
-    font-size: 9vw;
+    top: 50px;
+    font-size: 10.3vw;
   }
 }
 
@@ -847,7 +866,7 @@ html body .voice_section .voice_wrapper .voice_title {
 @media (max-width: 560px) {
   html body .voice_section .voice_wrapper .voice_title {
     font-size: 20px;
-    background-size: 270px;
+    background-size: 320px 30px;
     padding-bottom: 35px;
     padding-top: 42.4px;
   }
@@ -932,7 +951,7 @@ html body .voice_section .voice_wrapper .box_flex .item {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 22px 13px 24px 24px;
+  padding: 22px 30px 24px 24px;
   border-radius: 12px;
   -webkit-box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.16);
           box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.16);
@@ -1049,7 +1068,7 @@ html body .worry_section {
 @media (max-width: 560px) {
   html body .worry_section {
     padding-bottom: 47px;
-    padding-top: 40px;
+    padding-top: 20px;
   }
 }
 
@@ -1369,14 +1388,16 @@ html body .worry_section .worry_wrap .line_container .banner-line2_sp {
   }
 }
 
-html body #brand_section {
-  width: 100%;
-}
-
 html body .yellow_section {
   height: 18px;
   background-color: #FFE05D;
   position: relative;
+}
+
+@media (max-width: 560px) {
+  html body .yellow_section {
+    height: 12px;
+  }
 }
 
 html body .yellow_section .square {
@@ -1465,6 +1486,12 @@ html body .point_section .point_wrapper #point1_sp, html body .point_section .po
 @media (max-width: 560px) {
   html body .point_section .point_wrapper #point1_sp, html body .point_section .point_wrapper #point2_sp, html body .point_section .point_wrapper #point3_sp {
     display: block;
+  }
+}
+
+@media (max-width: 425px) {
+  html body .point_section .point_wrapper #point3_sp {
+    margin-bottom: 20px;
   }
 }
 
@@ -1567,6 +1594,29 @@ html body .point_section .point_wrapper .point .point-text-block .point-number {
   }
 }
 
+@media (max-width: 425px) {
+  html body .point_section .point_wrapper .point .point-text-block #sp_middle_h2 {
+    font-size: 6.5vw;
+  }
+}
+
+html body .point_section .point_wrapper .point .point-text-block .dot_img {
+  width: 398px;
+  margin-top: 30px;
+}
+
+@media (max-width: 1024px) {
+  html body .point_section .point_wrapper .point .point-text-block .dot_img {
+    width: 370px;
+  }
+}
+
+@media (max-width: 768px) {
+  html body .point_section .point_wrapper .point .point-text-block .dot_img {
+    width: 40vw;
+  }
+}
+
 html body .point_section .point_wrapper .point .point-text-block h2 {
   color: white;
   font-weight: 900px;
@@ -1598,19 +1648,8 @@ html body .point_section .point_wrapper .point .point-text-block h2 {
 
 html body .point_section .point_wrapper .point .point-text-block h2 .dot {
   color: #FFE05D;
-  padding-top: .2em;
-  background-position: top left 3px;
-  background-repeat: repeat-x;
-  background-size: 1em .3em;
-  -moz-background-size: 1em .3em;
-  -webkit-background-size: 1em .3em;
-  -o-background-size: 1em .3em;
-  -ms-background-size: 1em .3em;
-  background-image: -webkit-linear-radial-gradient(0.12em 0.12em at center center, #FFE05D, #FFE05D 100%, rgba(255, 255, 255, 0));
-  background-image: -moz-linear-radial-gradient(0.12em 0.12em at center center, #FFE05D, #FFE05D 100%, rgba(255, 255, 255, 0));
-  background-image: -ms-linear-radial-gradient(0.12em 0.12em at center center, #FFE05D, #FFE05D 100%, rgba(255, 255, 255, 0));
-  background-image: -o-linear-radial-gradient(0.12em 0.12em at center center, #FFE05D, #FFE05D 100%, rgba(255, 255, 255, 0));
-  background-image: radial-gradient(0.12em 0.12em at center center, #FFE05D, #FFE05D 100%, rgba(0, 0, 0, 0));
+  text-emphasis: circle #FFE05D;
+  -webkit-text-emphasis: circle #FFE05D;
 }
 
 html body .point_section .point_wrapper .point .point-text-block .point-text-area {
@@ -1633,6 +1672,7 @@ html body .point_section .point_wrapper .point .point-text-block .point-text-are
 
 html body .point_section .point_wrapper .point .point_img {
   width: 456px;
+  height: 320px;
 }
 
 @media (max-width: 1024px) {
@@ -1739,6 +1779,7 @@ html body .consulting_section .consulting_wrapper .consulting-title {
 @media (max-width: 560px) {
   html body .consulting_section .consulting_wrapper .consulting-title {
     font-size: 22px;
+    margin-bottom: 31px;
   }
 }
 
@@ -2350,6 +2391,12 @@ html body .logo_section .logo_wrapper {
   }
 }
 
+@media (max-width: 560px) {
+  html body .logo_section .logo_wrapper {
+    padding-top: 67px;
+  }
+}
+
 html body .logo_section .logo_wrapper .logo_section_title {
   font-size: 35px;
   color: #0564A8;
@@ -2389,6 +2436,7 @@ html body .logo_section .logo_wrapper .logo_section_title:after {
     -webkit-box-flex: 0.3;
         -ms-flex-positive: 0.3;
             flex-grow: 0.3;
+    border-top: 1px solid;
   }
 }
 
@@ -2599,7 +2647,7 @@ html body .question_wrapper .question_box .question_title {
 html body .question_wrapper .question_box .accordion-container .accordion-title {
   position: relative;
   margin: 0;
-  padding: 29px 0 31px 0px;
+  padding: 29px 0 31px 10px;
   font-size: 20px;
   font-weight: normal;
   color: #0564A8;
@@ -2628,7 +2676,7 @@ html body .question_wrapper .question_box .accordion-container .accordion-title 
   html body .question_wrapper .question_box .accordion-container .accordion-title {
     width: 95%;
     font-size: 14px;
-    padding: 12px 70px 13px 0px;
+    padding: 12px 50px 13px 0px;
   }
 }
 

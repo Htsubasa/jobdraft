@@ -381,6 +381,7 @@ body{
 
 .mainvisual{
   &_wrapper{
+    position: relative;
     
     .fv_pc{
       width: 100%;
@@ -390,6 +391,19 @@ body{
         display: none;
       }
     }
+
+    .mv_line{
+      position: absolute;
+      width: 38%;
+      bottom: 10%;
+      z-index: 10;
+      left: 13%;
+      @include sp{
+        display: none;
+      }
+    }
+
+
     .fv_sp{
       display: none;
       @include sp{
@@ -444,7 +458,7 @@ body{
     }
 
     .back_title{
-      font-size: 10vw;
+      font-size: 11vw;
       opacity: 0.08;
       font-family: 'Montserrat', sans-serif;
       position: absolute;
@@ -452,10 +466,11 @@ body{
       color: white;
       font-weight: bold;
       width: 100%;
+      top: 25px;
       text-align: center;
       @include tab{
-        top: 30px;
-        font-size: 9vw;
+        top: 50px;
+        font-size: 10.3vw;
       }
 
     }
@@ -478,7 +493,7 @@ body{
       }
       @include sp{
         font-size: 20px;
-        background-size: 270px;
+        background-size: 320px 30px;
         padding-bottom: 35px;
         padding-top: 42.4px;
       }
@@ -543,7 +558,7 @@ body{
         height: 144px;
         display: flex;
         justify-content: space-between;
-        padding: 22px 13px 24px 24px;
+        padding: 22px 30px 24px 24px;
         border-radius: 12px;
         box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.16);
         @include pc-head(){
@@ -628,7 +643,7 @@ body{
   padding-bottom: 155px;
   @include sp{
     padding-bottom: 47px;
-    padding-top: 40px;
+    padding-top: 20px;
   }
 
   .worry_wrap{
@@ -861,6 +876,11 @@ body{
   height: 18px;
   background-color: $yellow;
   position: relative;
+
+  @include sp{
+    height: 12px;
+  }
+  
   .square{
     width: 560px;
     position: absolute;
@@ -926,6 +946,13 @@ body{
         display: block;
       }
     }
+
+    #point3_sp{
+      @include sp-second(){
+        margin-bottom: 20px;
+      }
+    }
+
 
 
     .point{
@@ -997,6 +1024,24 @@ body{
 
          
         }
+
+        #sp_middle_h2{
+          @include sp-second(){
+            font-size: 6.5vw;
+          }
+        }
+
+        .dot_img{
+          width: 398px;
+          margin-top: 30px;
+          @include pc{
+            width: 370px;
+          }
+          @include tab{
+            width: 40vw;
+          }
+
+        }
         h2{
           color: white;
           font-weight: 900px;
@@ -1018,19 +1063,8 @@ body{
   
           .dot{
             color: $yellow;
-            padding-top: .2em;
-            background-position: top left 3px;
-            background-repeat: repeat-x;
-            background-size: 1em .3em;
-            -moz-background-size:1em .3em;;
-            -webkit-background-size:1em .3em;;
-            -o-background-size:1em .3em;;
-            -ms-background-size:1em .3em;;
-            background-image: -webkit-linear-radial-gradient(.12em .12em at center center,$yellow,$yellow 100%,rgba(255,255,255,0));
-            background-image: -moz-linear-radial-gradient(.12em .12em at center center,$yellow,$yellow 100%,rgba(255,255,255,0));
-            background-image: -ms-linear-radial-gradient(.12em .12em at center center,$yellow,$yellow 100%,rgba(255,255,255,0));
-            background-image: -o-linear-radial-gradient(.12em .12em at center center,$yellow,$yellow 100%,rgba(255,255,255,0));
-            background-image: radial-gradient(.12em .12em at center center,$yellow,$yellow 100%,rgba(0,0,0,0));
+            text-emphasis: circle $yellow;
+            -webkit-text-emphasis: circle $yellow;
             }
         }
         .point-text-area{
@@ -1048,6 +1082,7 @@ body{
 
       .point_img{
         width: 456px;
+        height: 320px;
         @include pc{
           width: 45vw;
           height: 31.5vw;
@@ -1115,6 +1150,7 @@ body{
       }
       @include sp{
         font-size: 22px;
+        margin-bottom: 31px;
       }
     }
 
@@ -1557,6 +1593,9 @@ margin-left: 2rem;
     @include tab{
       padding-top: 110px;
     }
+    @include sp{
+      padding-top:67px;
+    }
     .logo_section_title{
       font-size: 35px;
       color: $blue;
@@ -1580,6 +1619,7 @@ content: "";
 flex-grow: 0.09;
 @include sp{
   flex-grow: 0.3;
+  border-top: 1px solid;
 }
 }
 .logo_section_title:before {
@@ -1726,7 +1766,7 @@ margin-left: 2rem;
       .accordion-container .accordion-title {
         position: relative;
         margin: 0;
-        padding: 29px 0 31px 0px;
+        padding: 29px 0 31px 10px;
         font-size: 20px;
         font-weight: normal;
         color: $blue;
@@ -1734,6 +1774,7 @@ margin-left: 2rem;
         width: 757px;
         border-bottom: 1px solid $blue;
         font-weight: bold;
+
         @include pc{
           max-width: 680px;
           margin: 0 auto;
@@ -1746,7 +1787,7 @@ margin-left: 2rem;
         @include sp{
           width: 95%;
           font-size: 14px;
-          padding: 12px 70px 13px 0px;
+          padding: 12px 50px 13px 0px;
         }
       }
     
