@@ -470,11 +470,29 @@
 
 <footer>
     <div class="footer-wrapper">
-        <a class="footer_banner_img" href="https://line.me/R/ti/p/@jcy9186e"><img class="footer-banner" src="img/footer-banner.png" alt="LINEバナー"></a>
+        <a class="footer_banner_img" href="https://line.me/R/ti/p/@jcy9186e">
+            <img class="footer-banner" src="img/footer-banner.png" alt="LINEバナー">
+        </a>
+    </a>
     </div>
 </footer>
-
-
+<script>
+    jQuery(window).on("scroll", function($) {
+      if (jQuery(this).scrollTop() > 100) {
+        jQuery('.footer-banner').show();
+      } else {
+        jQuery('.footer-banner').hide();
+      }
+    });
+    
+    jQuery('.footer-banner').click(function () {
+      jQuery('body,html').animate({
+        scrollTop: 0
+      }, 500);
+      return false;
+    });
+    </script>
+    
 
 <script type="text/javascript">
     window.onscroll = function () {
