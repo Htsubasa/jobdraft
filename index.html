@@ -476,35 +476,17 @@
     </a>
     </div>
 </footer>
-<script>
-    jQuery(window).on("scroll", function($) {
-      if (jQuery(this).scrollTop() > 70) {
-        jQuery('.footer-banner').show();
-      } else {
-        jQuery('.footer-banner').hide();
-      }
-    });
-    
-    jQuery('.footer-banner').click(function () {
-      jQuery('body,html').animate({
-        scrollTop: 0
-      }, 500);
-      return false;
-    });
-    </script>
-    
+
 
 <script type="text/javascript">
     window.onscroll = function () {
         var check = window.pageYOffset ;       //現在のスクロール地点 
         var docHeight = $(document).height();   //ドキュメントの高さ
         var dispHeight = $(window).height();    //表示領域の高さ
- 
-        if(check > docHeight-dispHeight-1500){   //判別式　500はフッターからの距離です（ここはサイトのフッターに合わせて変更しましょう）
+        if(check > docHeight-dispHeight-1000){   //判別式　500はフッターからの距離です（ここはサイトのフッターに合わせて変更しましょう）
             $('.footer-banner').fadeOut(1000);	//1000 はフェードアウトの速度です。調整可
- 
         }else{
-            $('.footer-banner').fadeIn(1000);	//1000 はフェードインの速度です。調整可
+            $('.footer-banner').fadeIn(1400);	//1000 はフェードインの速度です。調整可
         }
     };
 </script>
