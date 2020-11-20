@@ -543,6 +543,7 @@ html body header .header-inner .header-nav ul #contact-nav a {
   font-weight: bold;
   letter-spacing: 0.375px;
   color: #ffffff;
+  position: relative;
 }
 
 @media (max-width: 1024px) {
@@ -551,6 +552,21 @@ html body header .header-inner .header-nav ul #contact-nav a {
     text-align: center;
     padding-left: 0px;
   }
+}
+
+html body header .header-inner .header-nav ul #contact-nav a::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border: 0px;
+  border-top: solid 2px #ffffff;
+  border-right: solid 2px #ffffff;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 53%;
+  right: 20px;
+  margin-top: -4px;
 }
 
 html body header .header-inner .sp_btn {
@@ -588,6 +604,7 @@ html body header .header-inner .sp_btn a {
   font-weight: bold;
   letter-spacing: 0.375px;
   color: #ffffff;
+  position: relative;
 }
 
 @media (max-width: 1024px) {
@@ -598,6 +615,35 @@ html body header .header-inner .sp_btn a {
     font-weight: bold;
     letter-spacing: 0.375px;
     color: #ffffff;
+  }
+}
+
+@media (max-width: 560px) {
+  html body header .header-inner .sp_btn a {
+    font-size: 11px;
+    padding-right: 10px;
+  }
+}
+
+html body header .header-inner .sp_btn a::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border: 0px;
+  border-top: solid 1px #ffffff;
+  border-right: solid 1px #ffffff;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 58%;
+  right: 14px;
+  margin-top: -4px;
+}
+
+@media (max-width: 560px) {
+  html body header .header-inner .sp_btn a::before {
+    top: 56%;
+    right: 12px;
   }
 }
 
