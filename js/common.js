@@ -115,3 +115,18 @@ $(function(){
 })(jQuery)
 
 
+
+
+$(function() {
+  var topBtn = $('.footer_banner_img');    
+  topBtn.hide();
+  //スクロールが100に達したらボタン表示
+  $(window).scroll(function () {
+      if ($(this).scrollTop() > 700) {
+          topBtn.fadeIn();
+      } else {
+          topBtn.fadeOut();
+      }
+  });
+
+});
