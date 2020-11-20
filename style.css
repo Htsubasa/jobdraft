@@ -363,9 +363,16 @@ html body header .header-inner {
   align-items: center;
   margin: 0 auto;
   padding: 14px 10px;
+  height: 90px;
   /*header-title*/
   /*contact-nav*/
   /*btn-gnavi*/
+}
+
+@media (max-width: 560px) {
+  html body header .header-inner {
+    height: 55px;
+  }
 }
 
 html body header .header-inner .header-title {
@@ -441,7 +448,7 @@ html body header .header-inner .header-nav {
     background-color: #0564A8;
     height: 100%;
     padding-top: 0px;
-    z-index: 3;
+    z-index: 10;
     margin-top: 0px;
   }
 }
@@ -518,7 +525,6 @@ html body header .header-inner .header-nav ul #contact-nav {
   background: linear-gradient(to right, #3BC325, #A0DC1F);
   border-radius: 40px;
   margin-left: 35px;
-  margin-top: 15px;
   /*a*/
 }
 
@@ -526,6 +532,7 @@ html body header .header-inner .header-nav ul #contact-nav {
   html body header .header-inner .header-nav ul #contact-nav {
     width: 100%;
     padding-left: 0px;
+    margin-top: 15px;
   }
 }
 
@@ -604,7 +611,7 @@ html body header .header-inner .btn-gnavi {
     display: -ms-flexbox;
     display: flex;
     position: fixed;
-    top: 30px;
+    top: 33px;
     right: 4%;
     width: 30px;
     height: 24px;
@@ -617,7 +624,7 @@ html body header .header-inner .btn-gnavi {
 
 @media (max-width: 560px) {
   html body header .header-inner .btn-gnavi {
-    top: 25px;
+    top: 19px;
     right: 4%;
   }
 }
@@ -831,7 +838,7 @@ html body .voice_section .voice_wrapper .back_title {
   color: white;
   font-weight: bold;
   width: 100%;
-  top: 25px;
+  top: 10px;
   text-align: center;
 }
 
@@ -941,6 +948,22 @@ html body .voice_section .voice_wrapper .box_flex .slick-dots li button:before {
   color: white;
 }
 
+html body .voice_section .voice_wrapper .box_flex .item:last-child {
+  padding: 22px 17px 24px 24px;
+}
+
+@media (max-width: 1024px) {
+  html body .voice_section .voice_wrapper .box_flex .item:last-child {
+    padding: 22px 5px 24px 24px;
+  }
+}
+
+@media (max-width: 560px) {
+  html body .voice_section .voice_wrapper .box_flex .item:last-child {
+    padding: 13px 5px 18px 13px;
+  }
+}
+
 html body .voice_section .voice_wrapper .box_flex .item {
   background-color: white;
   width: 381px;
@@ -955,12 +978,21 @@ html body .voice_section .voice_wrapper .box_flex .item {
   border-radius: 12px;
   -webkit-box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.16);
           box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.16);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media (max-width: 1200px) {
   html body .voice_section .voice_wrapper .box_flex .item {
     width: 32vw;
     padding: 24px 13px 22px 19px;
+  }
+}
+
+@media (max-width: 1024px) {
+  html body .voice_section .voice_wrapper .box_flex .item {
+    padding: 24px 22px 22px 22px;
   }
 }
 
@@ -1098,7 +1130,7 @@ html body .worry_section .worry_wrap .worry_titleblock h2 {
     background-image: url(../img/worry_icon.png);
     background-size: 30px;
     background-size: 40px;
-    background-position: 74% 3px;
+    background-position: 68% 3px;
   }
 }
 
@@ -1106,14 +1138,14 @@ html body .worry_section .worry_wrap .worry_titleblock h2 {
   html body .worry_section .worry_wrap .worry_titleblock h2 {
     font-size: 23px;
     padding-bottom: 0px;
-    background-position: 78% 0px;
+    background-position: 68% 0px;
     background-size: 35px;
   }
 }
 
 @media (max-width: 425px) {
   html body .worry_section .worry_wrap .worry_titleblock h2 {
-    background-position: 90% 0px;
+    background-position: 78% 0px;
   }
 }
 
@@ -1129,6 +1161,7 @@ html body .worry_section .worry_wrap .worry_titleblock h2 .blue-text {
 
 html body .worry_section .worry_wrap .worry_titleblock h2 img {
   width: 53px;
+  margin-left: 10px;
 }
 
 @media (max-width: 768px) {
@@ -1444,6 +1477,12 @@ html body .yellow_section .yellow-section-text {
 
 @media (max-width: 768px) {
   html body .yellow_section .yellow-section-text {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 560px) {
+  html body .yellow_section .yellow-section-text {
     font-size: 19px;
   }
 }
@@ -1615,6 +1654,25 @@ html body .point_section .point_wrapper .point .point-text-block .dot_img {
 @media (max-width: 768px) {
   html body .point_section .point_wrapper .point .point-text-block .dot_img {
     width: 40vw;
+  }
+}
+
+@media (max-width: 560px) {
+  html body .point_section .point_wrapper .point .point-text-block .dot_img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 auto;
+    width: 70%;
+    margin-top: 25px;
+    margin-bottom: 18px;
+  }
+}
+
+@media (max-width: 560px) {
+  html body .point_section .point_wrapper .point .point-text-block .dot_img {
+    margin-top: 18px;
+    width: 80%;
   }
 }
 
@@ -1831,7 +1889,6 @@ html body .consulting_section .consulting_wrapper .consulting-title:after {
 
 html body .consulting_section .consulting_wrapper .slick-prev::before {
   content: url(../img/prev.png);
-  display: none;
 }
 
 html body .consulting_section .consulting_wrapper .slick-next::before {
@@ -2119,6 +2176,11 @@ html body .consulting_section .consulting_wrapper .consulting_block_top_sp {
     max-width: 1200px;
     width: 100%;
   }
+}
+
+html body .consulting_section .consulting_wrapper .consulting_block_top_sp .slick-track {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 html body .consulting_section .consulting_wrapper .consulting_block_top_sp .slick-list {
@@ -3309,7 +3371,6 @@ html body footer {
 html body footer .footer-wrapper {
   position: relative;
   height: 375px;
-  /*banner*/
 }
 
 @media (max-width: 560px) {
@@ -3318,8 +3379,12 @@ html body footer .footer-wrapper {
   }
 }
 
-html body footer .footer-wrapper .footer-banner {
-  position: fixed;
+html body footer .footer-wrapper .footer_banner_img {
+  /*banner*/
+}
+
+html body footer .footer-wrapper .footer_banner_img .footer-banner {
+  z-index: 100;
   width: 700px;
   height: auto;
   position: fixed;
@@ -3331,13 +3396,13 @@ html body footer .footer-wrapper .footer-banner {
 }
 
 @media (max-width: 768px) {
-  html body footer .footer-wrapper .footer-banner {
+  html body footer .footer-wrapper .footer_banner_img .footer-banner {
     width: 550px;
   }
 }
 
 @media (max-width: 560px) {
-  html body footer .footer-wrapper .footer-banner {
+  html body footer .footer-wrapper .footer_banner_img .footer-banner {
     max-width: 540px;
     width: 88%;
   }
